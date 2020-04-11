@@ -1,6 +1,7 @@
 package com.example.alimentador;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,12 +43,14 @@ public class MainActivity extends AppCompatActivity {
         // specify an adapter (see also next example)
         mAdapter = new MyAdapter(alarmas);
         recyclerView.setAdapter(mAdapter);
-
-
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
 
     }
 
     public void agregar(View v){
         alarmas.add(new Alarma());
+        mAdapter.notifyDataSetChanged();
     }
+
+
 }

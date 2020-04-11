@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
     <EditText
         android:id="@+id/etHora"
-        android:layout_width="230dp"
+        android:layout_width="275dp"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:autofillHints=""
         android:ems="10"
         android:inputType="time" />
 
-    <Button
-        android:id="@+id/btnMas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonMas" />
-
-    <Button
-        android:id="@+id/btnMenos"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/buttonMenos" />
+    <ImageButton
+        android:id="@+id/btnEliminar"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:backgroundTint="@android:color/transparent"
+        android:tint="#FF0000"
+        app:srcCompat="@android:drawable/ic_menu_delete" />
 </LinearLayout>
